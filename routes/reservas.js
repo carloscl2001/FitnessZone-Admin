@@ -95,14 +95,26 @@ router.put('/:_id', function (req, res) {
 
 //Eliminar todas las reservas.
 router.delete('/', function (req, res) {
-    reservasService.removeAll((err) => {
+    reservasService.getAll((err, reservas) => {
         if (err) {
             res.status(500).send({
                 msg: err
             });
+        } else if (reservas.length === 0) {
+            res.status(404).send({
+                msg: 'No hay reservas para eliminar'
+            });
         } else {
-            res.status(200).send({
-                msg: 'Reservas borradas'
+            reservasService.removeAll((err) => {
+                if (err) {
+                    res.status(500).send({
+                        msg: err
+                    });
+                } else {
+                    res.status(200).send({
+                        msg: 'Reservas borradas'
+                    });
+                }
             });
         }
     });
