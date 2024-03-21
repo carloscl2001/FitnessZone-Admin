@@ -88,7 +88,7 @@ router.post('/', function (req, res) {
     let movie = req.body;
     if (Object.entries(movie).length === 0){
         res.status(400).send({
-            msg: 'Empty movie'
+            msg: 'Reserva no realizada, inserte datos.'
         });
     }
 	else{
