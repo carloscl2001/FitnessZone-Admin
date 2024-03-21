@@ -15,20 +15,20 @@ app.use(logger('dev'));
 app.use(cors());
 
 app.get('/', function (req, res) {
-	res.status(200).send('BIENVENIDO A LA PÁGINA PEUIRCO/');
+	res.status(200).send('SERVIDOR LISTO PARA SU CORRECTO FUNCIONAMIENTO');
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const moviesService = require('./routes/movies-service');
-const movies = require('./routes/movies');
-app.use('/movies', movies);
+const reservasService = require('./routes/reservas-service');
+const reservas = require('./routes/reservas');
+app.use('/reservas', reservas);
 
 const server = http.createServer(app);
 
-moviesService.connectDb(function (err) {
+reservasService.connectDb(function (err) {
     if (err) {
-        console.log('Could not connect with MongoDB – moviesService');
+        console.log('Could not connect with MongoDB – reservasService');
         process.exit(1);
     }
 

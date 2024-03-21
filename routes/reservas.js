@@ -2,20 +2,20 @@
 
 const express = require('express');
 const router = express.Router();
-const moviesService = require('./movies-service');
+const reservasService = require('./reservas-service');
 
 router.get('/', function (req, res) {
-    moviesService.getAll((err, movies) => {
+    reservasService.getAll((err, reservas) => {
             if (err) {
                 res.status(500).send({
                     msg: err
                 });
-            } else if (movies.length == 0){
+            } else if (reservas.length == 0){
             	res.status(500).send({
-                    msg: "movies null"
+                    msg: "reservas null"
                 });
             } else {
-                res.status(200).send(movies);
+                res.status(200).send(reservas);
             }
         }
     );
@@ -29,7 +29,7 @@ router.post('/', function (req, res) {
         });
     }
 	else{
-		moviesService.add(movie, (err, movie) => {
+		reservasService.add(movie, (err, movie) => {
             if (err) {
                 res.status(500).send({
                     msg: err
@@ -47,7 +47,7 @@ router.post('/', function (req, res) {
 
 
 router.delete('/', function (req, res) {
-    moviesService.removeAll((err) => {
+    reservasService.removeAll((err) => {
         if (err) {
             res.status(500).send({
                 msg: err
@@ -63,7 +63,7 @@ router.delete('/', function (req, res) {
 
 router.get('/:_id', function (req, res) {
     let _id = req.params._id;
-    moviesService.get(_id, (err, movie) => {
+    reservasService.get(_id, (err, movie) => {
             if (err) {
                 res.status(500).send({
                 	msg: err
@@ -83,7 +83,7 @@ router.get('/:_id', function (req, res) {
 router.put('/:_id', function (req, res) {
     const _id = req.params._id;
     const updatedMovie = req.body;
-    moviesService.update(_id, updatedMovie, (err, numUpdates) => {
+    reservasService.update(_id, updatedMovie, (err, numUpdates) => {
         if (err) {
             res.status(500).send({
                 msg: err
@@ -104,7 +104,7 @@ router.put('/:_id', function (req, res) {
 /* COMPLETAR:
 router.delete('COMPLETAR', function (req, res) {
     let _id = COMPLETAR;
-    moviesService.COMPLETAR(_id, (err) => {
+    reservasService.COMPLETAR(_id, (err) => {
        COMPLETAR
     });
 });*/
