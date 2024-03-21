@@ -114,11 +114,11 @@ router.delete('/:_id', function (req, res) {
     reservasService.remove(_id, (err) => {
         if (err) {
             res.status(500).send({
-                msg: err
+                msg:  'No se encuentra esta reserva para cancelar'
             });
         } else {
             res.status(200).send({
-                msg: 'Reservas canceladas'
+                msg: 'Reserva cancelada'
             });
         }
     });
