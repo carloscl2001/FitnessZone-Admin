@@ -4,44 +4,6 @@ const express = require('express');
 const router = express.Router();
 const reservasService = require('./reservas-service');
 
-//Prueba de reservas
-/*let reservas = [
-    {
-        "nombre": "Daniel Garcia",
-        "apellidos": "dg001@gmail.com",
-        "num_personas": "zumba",
-        "personas": 2,
-        "pilates": false,
-        "trx": true,
-        "yoga" : false,
-        "fecha": "23/08/2023",
-        "tramo": "10:55"
-    },
-    {
-        "nombre": "Pedro José",
-        "apellidos": "pj002@gmail.com",
-        "num_personas": "zumba",
-        "personas": 2,
-        "pilates": false,
-        "trx": true,
-        "yoga" : false,
-        "fecha": "23/08/2023",
-        "tramo": "10:55"
-    },
-    {
-        "nombre": "Manuel Perez",
-        "apellidos": "mp003@gmail.com",
-        "num_personas": "zumba",
-        "personas": 2,
-        "pilates": false,
-        "trx": true,
-        "yoga" : false,
-        "fecha": "23/08/2023",
-        "tramo": "10:55"
-    }
-    
-];*/
-
 
 
 //Recuperar todas las reservas.
@@ -52,8 +14,8 @@ router.get('/', function (req, res) {
                     msg: err
                 });
             } else if (reservas.length == 0){
-            	res.status(500).send({
-                    msg: "No hay reservas actualmente"
+                res.status(500).send({
+                    msg: "No hay reservas actualemnte"
                 });
             } else {
                 res.status(200).send(reservas);
@@ -66,17 +28,17 @@ router.get('/', function (req, res) {
 //Recuperar una única reserva existente por ID.
 router.get('/:_id', function (req, res) {
     let _id = req.params._id;
-    reservasService.get(_id, (err, movie) => {
+    reservasService.get(_id, (err, reserva) => {
             if (err) {
                 res.status(500).send({
-                    msg: err
-                });
-            } else if (movie.length == 0){
-                res.status(500).send({
-                    msg: "No existe esa reserva"
+                	msg: err
+            	});
+            } else if (reserva.length == 0){
+            	res.status(500).send({
+                    msg: "reserva is null"
                 });
             } else {
-                res.status(200).send(movie);
+                res.status(200).send(reserva);
             }
         }
     );
@@ -92,7 +54,7 @@ router.post('/', function (req, res) {
         });
     }
 	else{
-		reservasService.add(movie, (err, movie) => {
+		reservasService.add(movie, (err, reserva) => {
             if (err) {
                 res.status(500).send({
                     msg: err
@@ -112,15 +74,15 @@ router.post('/', function (req, res) {
 //Actualizar una reserva existente por ID.
 router.put('/:_id', function (req, res) {
     const _id = req.params._id;
-    const updatedMovie = req.body;
-    reservasService.update(_id, updatedMovie, (err, numUpdates) => {
+    const updatedReserva = req.body;
+    reservasService.update(_id, updatedReserva, (err, numUpdates) => {
         if (err) {
             res.status(500).send({
                 msg: err
             });
-    } else if(numUpdates.modifiedCount === 0) {
+	} else if(numUpdates.modifiedCount === 0) {
             res.status(500).send({
-                msg: "Reserva no actualizada"
+                msg: "Not updated"
             });
         } else {
             res.status(200).send({
@@ -140,16 +102,15 @@ router.delete('/', function (req, res) {
             });
         } else {
             res.status(200).send({
-                msg: 'Reserva cancelada'
+                msg: 'Reservas borradas'
             });
         }
     });
 });
 
-
 //Eliminar una unica reserva existente por ID.
 router.delete('/:_id', function (req, res) {
-    let _id = req.params._id;;
+    let _id = req.params._id;
     reservasService.remove(_id, (err) => {
         if (err) {
             res.status(500).send({
