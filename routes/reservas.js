@@ -60,8 +60,7 @@ router.post('/', function (req, res) {
                     msg: err
                 });
             } 
-			else
-			{
+			else{
                 res.status(201).send({
                     msg: 'Reserva realizada'
                 });
@@ -76,10 +75,10 @@ router.put('/:_id', function (req, res) {
     const _id = req.params._id;
     const updatedReserva = req.body;
     reservasService.update(_id, updatedReserva, (err, numUpdates) => {
-        if (err) {
-            res.status(500).send({
-                msg: err
-            });
+    if (err) {
+        res.status(500).send({
+            msg: err
+        });
 	} else if(numUpdates.modifiedCount === 0) {
             res.status(500).send({
                 msg: "No existe la reserva para actualizar"
