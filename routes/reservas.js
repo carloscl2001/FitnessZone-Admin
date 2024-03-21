@@ -6,7 +6,7 @@ const reservasService = require('./reservas-service');
 
 
 
-//Recuperar todas las reservas.
+//Recuperar todas las reservas
 router.get('/', function (req, res) {
     reservasService.getAll((err, reservas) => {
             if (err) {
@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
                 });
             } else if (reservas.length == 0){
                 res.status(500).send({
-                    msg: "No hay reservas actualemnte"
+                    msg: "reservas null"
                 });
             } else {
                 res.status(200).send(reservas);
@@ -24,8 +24,39 @@ router.get('/', function (req, res) {
     );
 });
 
+//Añadir una reserva
+router.post('/', function (req, res) {
+    let reserva = req.body;
+    reservasService.add(reserva, (err, reserva) => {
+            if (err) {
+                res.status(500).send({
+                    msg: err
+                });
+            } else if (reserva.length != 0) {
+                res.status(201).send({
+                    msg: 'Reserva creada'
+                });
+            }
+        }
+    );
+});
 
-//Recuperar una única reserva existente por ID.
+//Borrar todas las reservas
+router.delete('/', function (req, res) {
+    reservasService.removeAll((err) => {
+        if (err) {
+            res.status(500).send({
+                msg: err
+            });
+        } else {
+            res.status(200).send({
+                msg: 'Reservas borradas'
+            });
+        }
+    });
+});
+
+//Recuperar una reserva
 router.get('/:_id', function (req, res) {
     let _id = req.params._id;
     reservasService.get(_id, (err, reserva) => {
@@ -44,34 +75,7 @@ router.get('/:_id', function (req, res) {
     );
 });
 
-
-//Insertar una nueva reserva
-router.post('/', function (req, res) {
-    let movie = req.body;
-    if (Object.entries(movie).length === 0){
-        res.status(400).send({
-            msg: 'Reserva no realizada, inserte datos.'
-        });
-    }
-	else{
-		reservasService.add(movie, (err, reserva) => {
-            if (err) {
-                res.status(500).send({
-                    msg: err
-                });
-            } 
-			else
-			{
-                res.status(201).send({
-                    msg: 'Reserva realizada'
-                });
-            }
-        });
-	}
-});
-
-
-//Actualizar una reserva existente por ID.
+//Actualizar una reserva
 router.put('/:_id', function (req, res) {
     const _id = req.params._id;
     const updatedReserva = req.body;
@@ -92,36 +96,21 @@ router.put('/:_id', function (req, res) {
     });
 });
 
-
-//Eliminar todas las reservas.
-router.delete('/', function (req, res) {
-    reservasService.removeAll((err) => {
+//Borrar una reserva
+router.delete('/:id', function (req, res) {
+    let id = req.params.id;
+    reservasService.remove(id, (err) => {
         if (err) {
             res.status(500).send({
                 msg: err
             });
         } else {
             res.status(200).send({
-                msg: 'Reservas borradas'
+                msg: 'Reserva eliminada correctamente'
             });
         }
     });
 });
 
-//Eliminar una unica reserva existente por ID.
-router.delete('/:_id', function (req, res) {
-    let _id = req.params._id;
-    reservasService.remove(_id, (err) => {
-        if (err) {
-            res.status(500).send({
-                msg:  'No se encuentra esta reserva para cancelar'
-            });
-        } else {
-            res.status(200).send({
-                msg: 'Reserva cancelada'
-            });
-        }
-    });
-});
 
 module.exports = router;
