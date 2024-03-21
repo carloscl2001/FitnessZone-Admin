@@ -1,0 +1,76 @@
+[{
+    "nombre": "Carlos",
+    "apellidos": "Cortes",
+    "num_personas": 2,
+    "pilates": true,
+    "trx": false,
+    "yoga" : false,
+    "fecha": "23/08/2023",
+    "tramo": "9:00-10:00"
+},
+{
+    "nombre": "Roberto",
+    "apellidos": "Diaz",
+    "num_personas": 3,
+    "pilates": false,
+    "trx": true,
+    "yoga" : false,
+    "fecha": "24/08/2023",
+    "tramo": "11:00-12:00"
+},
+{
+    "nombre": "Daniel",
+    "apellidos": "Lopez",
+    "num_personas": 4,
+    "pilates": false,
+    "trx": false,
+    "yoga" : true,
+    "fecha": "25/08/2023",
+    "tramo": "12:00-13:00"
+},{
+    "nombre": "Pablo",
+    "apellidos": "Dominguez",
+    "num_personas": 5,
+    "pilates": true,
+    "trx": false,
+    "yoga" : false,
+    "fecha": "26/08/2023",
+    "tramo": "13:00-14:00"
+},{
+    "nombre": "Alejandro",
+    "apellidos": "Beardo",
+    "num_personas": 6,
+    "pilates": false,
+    "trx": true,
+    "yoga" : false,
+    "fecha": "01/09/2023",
+    "tramo": "09:00-10:00"
+},{
+    "nombre": "Daniel",
+    "apellidos": "Lopez",
+    "num_personas": 7,
+    "pilates": false,
+    "trx": false,
+    "yoga" : true,
+    "fecha": "02/09/2023",
+    "tramo": "12:00-13:00"
+},{
+    "nombre": "Antonio",
+    "apellidos": "Gomez",
+    "num_personas": 8,
+    "pilates": false,
+    "trx": false,
+    "yoga" : true,
+    "fecha": "03/09/2023",
+    "tramo": "12:00-13:00"
+},{
+    "nombre": "Victor",
+    "apellidos": "Coello",
+    "num_personas": 9,
+    "pilates": true,
+    "trx": false,
+    "yoga" : false,
+    "fecha": "04/09/2023",
+    "tramo": "13:00-14:00"
+}
+]
