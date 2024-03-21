@@ -15,7 +15,7 @@ app.use(logger('dev'));
 app.use(cors());
 
 app.get('/', function (req, res) {
-	res.status(200).send('BIENVENIDO A LA PÁGINA /');
+	res.status(200).send('BIENVENIDO A LA PÁGINA PEUIRCO/');
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
