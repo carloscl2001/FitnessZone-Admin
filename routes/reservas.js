@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
                 });
             } else if (reservas.length == 0){
                 res.status(500).send({
-                    msg: "No hay reservas actualemnte"
+                    msg: "No hay reservas actualmente"
                 });
             } else {
                 res.status(200).send(reservas);
@@ -35,7 +35,7 @@ router.get('/:_id', function (req, res) {
             	});
             } else if (reserva.length == 0){
             	res.status(500).send({
-                    msg: "reserva is null"
+                    msg: "No existe esa reserva"
                 });
             } else {
                 res.status(200).send(reserva);
@@ -82,7 +82,7 @@ router.put('/:_id', function (req, res) {
             });
 	} else if(numUpdates.modifiedCount === 0) {
             res.status(500).send({
-                msg: "Not updated"
+                msg: "No existe la reserva para actualizar"
             });
         } else {
             res.status(200).send({
