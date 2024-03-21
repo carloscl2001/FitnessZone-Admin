@@ -111,10 +111,14 @@ router.delete('/', function (req, res) {
 //Eliminar una unica reserva existente por ID.
 router.delete('/:_id', function (req, res) {
     let _id = req.params._id;
-    reservasService.remove(_id, (err) => {
+    reservasService.remove(_id, (err, result) => {
         if (err) {
             res.status(500).send({
-                msg:  'No se encuentra esta reserva para cancelar'
+                msg: 'Error al eliminar la reserva'
+            });
+        } else if (result.deletedCount === 0) {
+            res.status(404).send({
+                msg: 'La reserva que intenta eliminar no existe'
             });
         } else {
             res.status(200).send({
