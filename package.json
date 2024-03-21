@@ -13,13 +13,20 @@
   },
   "author": "Carlos Antonio Cortés Lora, Roberto Rivero Díaz",
   "license": "ISC",
-  "description": "Api de reservas",
+  "description": "API RESTful para la gestión total de reservas de salas.",
   "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "none"
   },
   "keywords": [
-    "none"
+    "API",
+    "RESTful",
+    "gestión de reservas",
+    "mongodb",
+    "postman",
+    "jQuery",
+    "salas",
+    "despliegue"
   ]
 }
