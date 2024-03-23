@@ -27,7 +27,6 @@ Reservas.prototype.getAll = function (callback) {
     return db.find({}).toArray(callback);
 };
 
-
 //Recuperar una única reserva existente por ID.
 Reservas.prototype.get = function (_id, callback) {
     return db.find({_id: ObjectId(_id)}).toArray(callback);
