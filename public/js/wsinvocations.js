@@ -48,8 +48,6 @@ function postReserva() {
         "tramo": $('#tramo').val()
     };
 
-    
-
     $.ajax({
         type: "POST",
         url: "http://localhost:8080/reservas",
@@ -138,6 +136,7 @@ function deleteReserva(reservaId) {
 function mostrarTabla(data){
     var tabla = "<table><thead><tr><th>ID</th><th>Nombre</th><th>Apellidos</th><th>Número de personas</th><th>Tipo</th><th>Fecha</th><th>Hora de inicio</th></tr></thead><tbody>";
     for (var i = 0; i < data.length; i++) {
+        bool = true;
         var tipoSala = '';
         if (data[i].pilates === true) {
             tipoSala = 'Pilates';
@@ -149,5 +148,5 @@ function mostrarTabla(data){
         tabla += "<tr><td>" + data[i]._id + "</td><td>" + data[i].nombre + "</td><td>" + data[i].apellidos + "</td><td>" + data[i].personas + "</td><td>" + tipoSala + "</td><td>" + data[i].fecha + "</td><td>" + data[i].tramo + "</td></tr>";
     }
     tabla += "</tbody></table>";
-    $("#resReserva").html(tabla);
+    $("#TablaReservas").html(tabla);
 }

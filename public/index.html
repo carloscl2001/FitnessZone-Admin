@@ -11,120 +11,122 @@
     <link href="index.css" rel="stylesheet" type="text/css">
 </head>
 <body onload="getAllReservas()">
-    <h1>Reservas Cliente</h1>
-
-    <h3 id="resReserva"></h3>
-    <div id="acciones1">
-        <div id = "Singulares">
-            <h2>Sentencias singulares:</h2>
-            <form id="getDeleteForm">
-                <label for="idUsuario">ID:</label>
-                <input type="text" id="idUsuario" name="idUsuario" required><br>
+    <h1>Reservas de los Clientes</h1>
+    <h3 id="TablaReservas"></h3>
+    <h1>Operaciones de las Reservas</h1>
+    <div id="reservas">
+        <div id="acciones1">
+            <div id = "Especificas">
+                <h2>Sentencias específicas</h2>
+                <form id="getDeleteForm">
+                    <label for="idUsuario">ID:</label>
+                    <input type="text" id="idUsuario" name="idUsuario" required><br>
+                
+                    <input type="button" value="VER RESERVA" onclick="getReserva($('#idUsuario').val())">
+                    <input type="button" value="BORRAR RESERVA" onclick="deleteReserva($('#idUsuario').val())" />
+                </form>
+            </div>
             
-                <input type="button" value="VER RESERVA" onclick="getReserva($('#idUsuario').val())">
-                <input type="button" value="BORRAR RESERVA" onclick="deleteReserva($('#idUsuario').val())" />
-            </form>
+            <div id = "Globales">		  
+                <h2>Sentencias globales</h2>
+                <input type="button" value="VER TODAS LAS RESERVAS" onclick="getAllReservas()" />
+                <input type="button" value="BORRAR TODAS LAS RESERVAS" onclick="deleteAllReservas()" />
+            </div>
+    
         </div>
-        
-        <div id = "Globales">		  
-            <h2>Sentencias globales:</h2>
-            <input type="button" value="VER TODAS LAS RESERVAS" onclick="getAllReservas()" />
-            <input type="button" value="BORRAR TODAS LAS RESERVAS" onclick="deleteAllReservas()" />
-        </div>
-
-    </div>
-    <div id="acciones2">
-        <div id = "anadir">
-            <h2>Hacer una nueva reserva:</h2>
-            <form id="postReservaForm">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required><br>
-                
-                <label for="apellidos">Apellidos</label>
-                <input type="text" id="apellidos" name="apellidos" required><br>
-                
-                <label for="sala">Tipo de Sala</label>
-                <select id="sala" name="sala">
-                    <option value="Pilates">Pilates</option>
-                    <option value="Trx">TRX</option>
-                    <option value="Yoga">Yoga</option>
-                </select><br>
-                
-                <label for="num_personas">Número de personas</label>
-                <input type="number" id="personas" name="personas" required><br>
-                
-                <label for="fecha">Fecha de la reserva</label>
-                <input type="date" id="fecha" name="fecha" required><br>
-                
-                <label for="tramo">Hora de inicio</label>
-                <select id="tramo" name="tramo" required>
-                </select><br>
-                <script>
-					// Generar opciones de hora para el tramo horario
-					var select = document.getElementById("tramo");
-					var horaInicio = 9;
-					var horaFin = 21;
-					
-					for (let i = horaInicio; i <= horaFin; i++) {
-						var hora = i < 10 ? '0' + i : '' + i;
-						var option = document.createElement("option");
-						option.value = hora + ':00';
-						option.text = hora + ':00';
-						select.appendChild(option);
-					}
-				</script>
-				
-                
-                <input type="button" value="ENVIAR RESERVA" onclick="postReserva()">
-            </form>	
-        </div>
-
-        <div id = "modificar">
-            <h2>Modificar una reserva:</h2>
-            <form id="putReservaForm">
-                <label for="idUsuario">ID</label>
-                <input type="text" id="idUsuario2" name="idUsuario" required><br>
-
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre2" name="nombre2" required><br>
-                
-                <label for="apellidos">Apellidos</label>
-                <input type="text" id="apellidos2" name="apellidos2" required><br>
-                
-                <label for="sala">Tipo de Sala</label>
-                <select id="sala2" name="sala2">
-                    <option value="Pilates">Pilates</option>
-                    <option value="Trx">Trx</option>
-                    <option value="Yoga">Yoga</option>
-                </select><br>
-                
-                <label for="num_personas">Número de personas</label>
-                <input type="number" id="personas2" name="personas2" required><br>
-                
-                <label for="fecha">Fecha de la reserva</label>
-                <input type="date" id="fecha2" name="fecha2" required><br>
-                
-                <label for="tramo">Hora de inicio</label>
-                <select id="tramo2" name="tramo2" required>
-                </select><br>
-				<script>
-					// Generar opciones de hora para el tramo horario
-					var select = document.getElementById("tramo2");
-					var horaInicio = 9;
-					var horaFin = 21;
-					
-					for (let i = horaInicio; i <= horaFin; i++) {
-						var hora = i < 10 ? '0' + i : '' + i;
-						var option = document.createElement("option");
-						option.value = hora + ':00';
-						option.text = hora + ':00';
-						select.appendChild(option);
-					}
-				</script>
-				
-                
-                <input type="button" value="MODIFICAR RESERVA" onclick="putReserva($('#idUsuario2').val())" />
-            </form>	
+        <div id="acciones2">
+            <div id = "anadir">
+                <h2>Hacer una nueva reserva</h2>
+                <form id="postReservaForm">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+                    
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" required><br>
+                    
+                    <label for="sala">Tipo de Sala</label>
+                    <select id="sala" name="sala">
+                        <option value="Pilates">Pilates</option>
+                        <option value="Trx">TRX</option>
+                        <option value="Yoga">Yoga</option>
+                    </select><br>
+                    
+                    <label for="num_personas">Número de personas</label>
+                    <input type="number" id="personas" name="personas" required><br>
+                    
+                    <label for="fecha">Fecha de la reserva</label>
+                    <input type="date" id="fecha" name="fecha" required><br>
+                    
+                    <label for="tramo">Hora de inicio</label>
+                    <select id="tramo" name="tramo" required>
+                    </select><br>
+                    <script>
+                        // Generar opciones de hora para el tramo horario
+                        var select = document.getElementById("tramo");
+                        var horaInicio = 9;
+                        var horaFin = 21;
+                        
+                        for (let i = horaInicio; i <= horaFin; i++) {
+                            var hora = i < 10 ? '0' + i : '' + i;
+                            var option = document.createElement("option");
+                            option.value = hora + ':00';
+                            option.text = hora + ':00';
+                            select.appendChild(option);
+                        }
+                    </script>
+                    
+                    
+                    <input type="button" value="ENVIAR RESERVA" onclick="postReserva()">
+                </form>	
+            </div>
+    
+            <div id = "modificar">
+                <h2>Modificar una reserva</h2>
+                <form id="putReservaForm">
+                    <label for="idUsuario">ID</label>
+                    <input type="text" id="idUsuario2" name="idUsuario" required><br>
+    
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre2" name="nombre2" required><br>
+                    
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos2" name="apellidos2" required><br>
+                    
+                    <label for="sala">Tipo de Sala</label>
+                    <select id="sala2" name="sala2">
+                        <option value="Pilates">Pilates</option>
+                        <option value="Trx">Trx</option>
+                        <option value="Yoga">Yoga</option>
+                    </select><br>
+                    
+                    <label for="num_personas">Número de personas</label>
+                    <input type="number" id="personas2" name="personas2" required><br>
+                    
+                    <label for="fecha">Fecha de la reserva</label>
+                    <input type="date" id="fecha2" name="fecha2" required><br>
+                    
+                    <label for="tramo">Hora de inicio</label>
+                    <select id="tramo2" name="tramo2" required>
+                    </select><br>
+                    <script>
+                        // Generar opciones de hora para el tramo horario
+                        var select = document.getElementById("tramo2");
+                        var horaInicio = 9;
+                        var horaFin = 21;
+                        
+                        for (let i = horaInicio; i <= horaFin; i++) {
+                            var hora = i < 10 ? '0' + i : '' + i;
+                            var option = document.createElement("option");
+                            option.value = hora + ':00';
+                            option.text = hora + ':00';
+                            select.appendChild(option);
+                        }
+                    </script>
+                    
+                    
+                    <input type="button" value="MODIFICAR RESERVA" onclick="putReserva($('#idUsuario2').val())" />
+                </form>	
+            </div>
         </div>
     </div>
 </body>
