@@ -1,7 +1,7 @@
 [{
     "nombre": "Carlos",
     "apellidos": "Cortes",
-    "num_personas": 2,
+    "personas": 2,
     "pilates": true,
     "trx": false,
     "yoga" : false,
@@ -11,7 +11,7 @@
 {
     "nombre": "Roberto",
     "apellidos": "Diaz",
-    "num_personas": 3,
+    "personas": 3,
     "pilates": false,
     "trx": true,
     "yoga" : false,
@@ -21,7 +21,7 @@
 {
     "nombre": "Daniel",
     "apellidos": "Lopez",
-    "num_personas": 4,
+    "personas": 4,
     "pilates": false,
     "trx": false,
     "yoga" : true,
@@ -30,7 +30,7 @@
 },{
     "nombre": "Pablo",
     "apellidos": "Dominguez",
-    "num_personas": 5,
+    "personas": 5,
     "pilates": true,
     "trx": false,
     "yoga" : false,
@@ -39,7 +39,7 @@
 },{
     "nombre": "Alejandro",
     "apellidos": "Beardo",
-    "num_personas": 6,
+    "personas": 6,
     "pilates": false,
     "trx": true,
     "yoga" : false,
@@ -48,7 +48,7 @@
 },{
     "nombre": "Daniel",
     "apellidos": "Lopez",
-    "num_personas": 7,
+    "personas": 7,
     "pilates": false,
     "trx": false,
     "yoga" : true,
@@ -57,7 +57,7 @@
 },{
     "nombre": "Antonio",
     "apellidos": "Gomez",
-    "num_personas": 8,
+    "personas": 8,
     "pilates": false,
     "trx": false,
     "yoga" : true,
@@ -66,7 +66,7 @@
 },{
     "nombre": "Victor",
     "apellidos": "Coello",
-    "num_personas": 9,
+    "personas": 9,
     "pilates": true,
     "trx": false,
     "yoga" : false,
