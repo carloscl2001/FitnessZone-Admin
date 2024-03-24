@@ -105,6 +105,7 @@ input[type="button"]:hover{
 
 #acciones1 > div, #acciones2 > div {
     margin-right: 2rem;
+    border: 1px solid black;
 }
 
 #Especificas, #Globales, #anadir, #modificar {

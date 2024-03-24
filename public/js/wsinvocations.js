@@ -37,6 +37,7 @@ function getReserva(reservaId) {
 
 //Insertar una nueva reserva
 function postReserva() {
+    //Obtenemos los valores de los campos del formulario
     var data = {
         "nombre": $('#nombre').val(),
         "apellidos": $('#apellidos').val(),
@@ -66,6 +67,7 @@ function postReserva() {
 
 //Actualizar una reserva existente por ID.
 function putReserva(reservaId) {
+    //Obtenemos los valores de los campos del formulario
     var data = {
         "nombre": $('#nombre2').val(),
         "apellidos": $('#apellidos2').val(),
