@@ -13,7 +13,7 @@
   },
   "author": "Carlos Antonio Cortés Lora, Roberto Rivero Díaz",
   "license": "ISC",
-  "description": "API RESTful para la gestión total de reservas de salas en mongodb. Incluyo operaciones para crear, eliminar, modificar y consultar reservas.",
+  "description": "API RESTful para la gestión total de reservas de salas de Yoga, TRX y Pilates en mongoDB. Incluyendo operaciones para crear, eliminar, modificar y consultar reservas.",
   "devDependencies": {},
   "repository": {
     "type": "git",

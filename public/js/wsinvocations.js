@@ -44,7 +44,7 @@ function postReserva() {
         "pilates": $('#sala').val() === 'Pilates', // Si selecciona Pilates, establecer pilates como true
         "trx": $('#sala').val() === 'Trx', // Si selecciona TRX, establecer trx como true
         "yoga": $('#sala').val() === 'Yoga',// Si selecciona Yoga, establecer yoga como true
-        "personas": $('#personas').val(),
+        "personas": parseInt($('#personas').val()),
         "fecha": $('#fecha').val(),
         "tramo": $('#tramo').val()
     };
@@ -74,7 +74,7 @@ function putReserva(reservaId) {
         "pilates": $('#sala2').val() === 'Pilates', // Si selecciona Pilates, establecer pilates como true
         "trx": $('#sala2').val() === 'Trx', // Si selecciona TRX, establecer trx como true
         "yoga": $('#sala2').val() === 'Yoga',// Si selecciona Yoga, establecer yoga como true
-        "personas": $('#personas2').val(),
+        "personas": parseInt($('#personas2').val()),
         "fecha": $('#fecha2').val(),
         "tramo": $('#tramo2').val(),
     };

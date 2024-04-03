@@ -1,16 +1,14 @@
 [
     {
-        "_id": "660d9e9d3e48efa2e154e849",
         "nombre": "Carlos Antonio",
         "apellidos": "Cortés Lora",
         "pilates": true,
         "trx": false,
         "yoga": false,
-        "personas": "2",
+        "personas": 2,
         "fecha": "2024-04-04",
         "tramo": "09:00"
     },{
-        "_id": "660d9eb73e48efa2e154e84a",
         "nombre": "Roberto",
         "apellidos": "Diaz",
         "pilates": false,
@@ -21,7 +19,6 @@
         "tramo": "11:00"
     },
     {
-        "_id": "660d9ed23e48efa2e154e84b",
         "nombre": "Daniel",
         "apellidos": "Lopez",
         "pilates": false,
@@ -32,7 +29,6 @@
         "tramo": "12:00"
     },
     {
-        "_id": "660d9edf3e48efa2e154e84c",
         "nombre": "Pablo",
         "apellidos": "Dominguez",
         "pilates": true,
@@ -43,7 +39,6 @@
         "tramo": "13:00"
     },
     {
-        "_id": "660d9ee83e48efa2e154e84d",
         "nombre": "Alejandro",
         "apellidos": "Beardo",
         "pilates": false,
@@ -54,7 +49,6 @@
         "tramo": "09:00"
     },
     {
-        "_id": "660d9f033e48efa2e154e84e",
         "nombre": "Ismael",
         "apellidos": "Garcia",
         "pilates": false,
@@ -65,7 +59,6 @@
         "tramo": "12:00"
     },
     {
-        "_id": "660d9f0a3e48efa2e154e84f",
         "nombre": "Antonio",
         "apellidos": "Gomez",
         "pilates": false,
@@ -76,7 +69,6 @@
         "tramo": "12:00"
     },
     {
-        "_id": "660d9f103e48efa2e154e850",
         "nombre": "Victor",
         "apellidos": "Coello",
         "pilates": true,

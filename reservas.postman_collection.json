@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7e50465a-da06-4fa3-96d3-448cdabf2d25",
+		"_postman_id": "e0ebcf15-62ad-425e-8072-06706ee7c283",
 		"name": "reservas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33589488"
@@ -146,14 +146,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/reservas",
+					"raw": "http://localhost:8080/reservas/660d79eb6f8dae0786f35d5d",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"reservas"
+						"reservas",
+						"660d79eb6f8dae0786f35d5d"
 					]
 				}
 			},
@@ -283,7 +284,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellidos\": \"Cortes\",\r\n    \"personas\": 2,\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\" : false,\r\n    \"fecha\": \"23/08/2023\",\r\n    \"tramo\": \"9:00\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellidos\": \"Cortes\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\" : false,\r\n    \"personas\": 2,\r\n    \"fecha\": \"23/08/2023\",\r\n    \"tramo\": \"9:00\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -310,7 +311,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellidos\": \"Cortes\",\r\n    \"personas\": 2,\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\" : false,\r\n    \"fecha\": \"23/08/2023\",\r\n    \"tramo\": \"9:00\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellidos\": \"Cortes\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\" : false,\r\n    \"personas\": 2,\r\n    \"fecha\": \"23/08/2023\",\r\n    \"tramo\": \"9:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -355,7 +356,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Apr 2024 15:51:17 GMT"
+							"value": "Wed, 03 Apr 2024 19:15:05 GMT"
 						},
 						{
 							"key": "Connection",
@@ -370,13 +371,13 @@
 					"body": "{\n    \"msg\": \"Reserva realizada\"\n}"
 				},
 				{
-					"name": "Caso de reserva no existente",
+					"name": "Caso de reserva vacía",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -421,7 +422,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Apr 2024 15:51:31 GMT"
+							"value": "Wed, 03 Apr 2024 19:15:18 GMT"
 						},
 						{
 							"key": "Connection",
@@ -444,7 +445,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"_id\": \"660d79eb6f8dae0786f35d5d\",\r\n    \"nombre\": \"Carlos Antonio\",\r\n    \"apellidos\": \"Cortés Lora\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\": false,\r\n    \"personas\": \"4\",\r\n    \"fecha\": \"2024-04-04\",\r\n    \"tramo\": \"09:00\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Carlos Antonio\",\r\n    \"apellidos\": \"Cortés Lora\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\": false,\r\n    \"personas\": 2,\r\n    \"fecha\": \"2024-04-04\",\r\n    \"tramo\": \"10:00\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -452,7 +453,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/reservas/660d79eb6f8dae0786f35d3d",
+					"raw": "http://localhost:8080/reservas/660daab914023da254989a97",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -460,7 +461,7 @@
 					"port": "8080",
 					"path": [
 						"reservas",
-						"660d79eb6f8dae0786f35d3d"
+						"660daab914023da254989a97"
 					]
 				}
 			},
@@ -472,7 +473,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"_id\": \"660d79eb6f8dae0786f35d5d\",\r\n    \"nombre\": \"Carlos Antonio\",\r\n    \"apellidos\": \"Cortés Lora\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\": false,\r\n    \"personas\": \"4\",\r\n    \"fecha\": \"2024-04-04\",\r\n    \"tramo\": \"09:00\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Carlos Antonio\",\r\n    \"apellidos\": \"Cortés Lora\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\": false,\r\n    \"personas\": 2,\r\n    \"fecha\": \"2024-04-04\",\r\n    \"tramo\": \"10:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -480,7 +481,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/reservas/660d79eb6f8dae0786f35d5d",
+							"raw": "http://localhost:8080/reservas/660daab914023da254989a97",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -488,7 +489,7 @@
 							"port": "8080",
 							"path": [
 								"reservas",
-								"660d79eb6f8dae0786f35d5d"
+								"660daab914023da254989a97"
 							]
 						}
 					},
@@ -518,7 +519,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Apr 2024 15:57:23 GMT"
+							"value": "Wed, 03 Apr 2024 19:20:18 GMT"
 						},
 						{
 							"key": "Connection",
@@ -533,13 +534,13 @@
 					"body": "{\n    \"msg\": \"Reserva actualizada\"\n}"
 				},
 				{
-					"name": "Caso de reserva no existente",
+					"name": "modificar reserva concreta",
 					"originalRequest": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"_id\": \"660d79eb6f8dae0786f35d5d\",\r\n    \"nombre\": \"Carlos Antonio\",\r\n    \"apellidos\": \"Cortés Lora\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\": false,\r\n    \"personas\": \"4\",\r\n    \"fecha\": \"2024-04-04\",\r\n    \"tramo\": \"09:00\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Carlos Antonio\",\r\n    \"apellidos\": \"Cortés Lora\",\r\n    \"pilates\": true,\r\n    \"trx\": false,\r\n    \"yoga\": false,\r\n    \"personas\": 2,\r\n    \"fecha\": \"2024-04-04\",\r\n    \"tramo\": \"10:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -547,7 +548,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/reservas/660d79eb6f8dae0786f35d3d",
+							"raw": "http://localhost:8080/reservas/660daab914023da254989a96",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -555,7 +556,7 @@
 							"port": "8080",
 							"path": [
 								"reservas",
-								"660d79eb6f8dae0786f35d3d"
+								"660daab914023da254989a96"
 							]
 						}
 					},
@@ -585,7 +586,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Apr 2024 15:57:30 GMT"
+							"value": "Wed, 03 Apr 2024 19:20:42 GMT"
 						},
 						{
 							"key": "Connection",
@@ -741,7 +742,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/reservas/660d7d1a6f8dae0786f35d5f",
+					"raw": "http://localhost:8080/reservas/660daa3c14023da254989a96",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -749,18 +750,18 @@
 					"port": "8080",
 					"path": [
 						"reservas",
-						"660d7d1a6f8dae0786f35d5f"
+						"660daa3c14023da254989a96"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Caso de éxito",
+					"name": "eliminar una reserva concreta",
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/reservas/660d7d1a6f8dae0786f35d5f",
+							"raw": "http://localhost:8080/reservas/660daa3c14023da254989a96",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -768,7 +769,7 @@
 							"port": "8080",
 							"path": [
 								"reservas",
-								"660d7d1a6f8dae0786f35d5f"
+								"660daa3c14023da254989a96"
 							]
 						}
 					},
@@ -798,7 +799,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Apr 2024 16:00:46 GMT"
+							"value": "Wed, 03 Apr 2024 19:17:23 GMT"
 						},
 						{
 							"key": "Connection",
@@ -813,12 +814,12 @@
 					"body": "{\n    \"msg\": \"Reserva cancelada\"\n}"
 				},
 				{
-					"name": "Caso de reserva no existente",
+					"name": "eliminar una reserva concreta",
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/reservas/660d7d1a6f8dae0786f35d3f",
+							"raw": "http://localhost:8080/reservas/660daa3c14023da254989a96",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -826,7 +827,7 @@
 							"port": "8080",
 							"path": [
 								"reservas",
-								"660d7d1a6f8dae0786f35d3f"
+								"660daa3c14023da254989a96"
 							]
 						}
 					},
@@ -856,7 +857,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Apr 2024 16:00:54 GMT"
+							"value": "Wed, 03 Apr 2024 19:17:30 GMT"
 						},
 						{
 							"key": "Connection",
