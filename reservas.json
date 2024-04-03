@@ -1,76 +1,89 @@
-[{
-    "nombre": "Carlos",
-    "apellidos": "Cortes",
-    "personas": 2,
-    "pilates": true,
-    "trx": false,
-    "yoga" : false,
-    "fecha": "23/08/2023",
-    "tramo": "9:00"
-},
-{
-    "nombre": "Roberto",
-    "apellidos": "Diaz",
-    "personas": 3,
-    "pilates": false,
-    "trx": true,
-    "yoga" : false,
-    "fecha": "24/08/2023",
-    "tramo": "11:00"
-},
-{
-    "nombre": "Daniel",
-    "apellidos": "Lopez",
-    "personas": 4,
-    "pilates": false,
-    "trx": false,
-    "yoga" : true,
-    "fecha": "25/08/2023",
-    "tramo": "12:00"
-},{
-    "nombre": "Pablo",
-    "apellidos": "Dominguez",
-    "personas": 5,
-    "pilates": true,
-    "trx": false,
-    "yoga" : false,
-    "fecha": "26/08/2023",
-    "tramo": "13:00"
-},{
-    "nombre": "Alejandro",
-    "apellidos": "Beardo",
-    "personas": 6,
-    "pilates": false,
-    "trx": true,
-    "yoga" : false,
-    "fecha": "01/09/2023",
-    "tramo": "09:00"
-},{
-    "nombre": "Ismael",
-    "apellidos": "Garcia",
-    "personas": 7,
-    "pilates": false,
-    "trx": false,
-    "yoga" : true,
-    "fecha": "02/09/2023",
-    "tramo": "12:00"
-},{
-    "nombre": "Antonio",
-    "apellidos": "Gomez",
-    "personas": 8,
-    "pilates": false,
-    "trx": false,
-    "yoga" : true,
-    "fecha": "03/09/2023",
-    "tramo": "12:00"
-},{
-    "nombre": "Victor",
-    "apellidos": "Coello",
-    "personas": 9,
-    "pilates": true,
-    "trx": false,
-    "yoga" : false,
-    "fecha": "04/09/2023",
-    "tramo": "13:00"
-}
+[
+    {
+        "_id": "660d9e9d3e48efa2e154e849",
+        "nombre": "Carlos Antonio",
+        "apellidos": "Cortés Lora",
+        "pilates": true,
+        "trx": false,
+        "yoga": false,
+        "personas": "2",
+        "fecha": "2024-04-04",
+        "tramo": "09:00"
+    },{
+        "_id": "660d9eb73e48efa2e154e84a",
+        "nombre": "Roberto",
+        "apellidos": "Diaz",
+        "pilates": false,
+        "trx": true,
+        "yoga": false,
+        "personas": 3,
+        "fecha": "24/08/2023",
+        "tramo": "11:00"
+    },
+    {
+        "_id": "660d9ed23e48efa2e154e84b",
+        "nombre": "Daniel",
+        "apellidos": "Lopez",
+        "pilates": false,
+        "trx": false,
+        "yoga": true,
+        "personas": 4,
+        "fecha": "25/08/2023",
+        "tramo": "12:00"
+    },
+    {
+        "_id": "660d9edf3e48efa2e154e84c",
+        "nombre": "Pablo",
+        "apellidos": "Dominguez",
+        "pilates": true,
+        "trx": false,
+        "yoga": false,
+        "personas": 5,
+        "fecha": "26/08/2023",
+        "tramo": "13:00"
+    },
+    {
+        "_id": "660d9ee83e48efa2e154e84d",
+        "nombre": "Alejandro",
+        "apellidos": "Beardo",
+        "pilates": false,
+        "trx": true,
+        "yoga": false,
+        "personas": 6,
+        "fecha": "01/09/2023",
+        "tramo": "09:00"
+    },
+    {
+        "_id": "660d9f033e48efa2e154e84e",
+        "nombre": "Ismael",
+        "apellidos": "Garcia",
+        "pilates": false,
+        "trx": false,
+        "yoga": true,
+        "personas": 7,
+        "fecha": "02/09/2023",
+        "tramo": "12:00"
+    },
+    {
+        "_id": "660d9f0a3e48efa2e154e84f",
+        "nombre": "Antonio",
+        "apellidos": "Gomez",
+        "pilates": false,
+        "trx": false,
+        "yoga": true,
+        "personas": 8,
+        "fecha": "03/09/2023",
+        "tramo": "12:00"
+    },
+    {
+        "_id": "660d9f103e48efa2e154e850",
+        "nombre": "Victor",
+        "apellidos": "Coello",
+        "pilates": true,
+        "trx": false,
+        "yoga": false,
+        "personas": 9,
+        "fecha": "04/09/2023",
+        "tramo": "13:00"
+    }
 ]
